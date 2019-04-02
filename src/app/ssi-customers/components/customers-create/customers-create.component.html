@@ -1,0 +1,95 @@
+<form class="customers-create" [formGroup]="customersFormGroup" (ngSubmit)="onSubmit()">
+
+  <section class="form-group">
+    <label for= "firstName">Nombre</label>
+    <input type="text"
+           class="form-control"
+           formControlName="firstName"
+           id="name"
+           aria-describedby="nameHelp"
+           placeholder="Ingrese su nombre"
+           autofocus>
+    <small id="nameHelp" class="form-text text-muted">Por favor ingrese su nombre</small>
+    <small class="form-text text-danger"
+           *ngIf="submitted && customersFormGroup.get('firstName').errors">
+      Este campo es requerido.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="lastName">Apellido</label>
+    <input class="form-control"
+              formControlName="lastName"
+              id="lastName"
+              aria-describedby="lastNameHelp"
+              placeholder="Por favor ingrese su apellido"
+              autofocus>
+    <small id="lastNameHelp" class="form-text text-muted">Por favor ingrese su apellido</small>
+    <small class="form-text text-danger"
+           *ngIf="submitted && customersFormGroup.get('lastName').errors">
+      Este campo es requerido.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="address">Direccion</label>
+    <input type="text"
+           class="form-control"
+           formControlName="address"
+           id="address"
+           aria-describedby="nameHelp"
+           placeholder="Ingrese su direccion"
+           autofocus>
+    <small id="nameHelp" class="form-text text-muted">Por favor ingrese su direccion</small>
+    <small class="form-text text-danger"
+           *ngIf="submitted && customersFormGroup.get('address').errors">
+      Este campo es requerido.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="phone">Telefono</label>
+    <input class="form-control"
+              formControlName="phone"
+              id="phone"
+              aria-describedby="phoneHelp"
+              placeholder="Por favor ingrese su numero de telefono"
+              autofocus>
+    <small id="phoneHelp" class="form-text text-muted">Por favor ingrese su numero de telefono</small>
+    <small class="form-text text-danger"
+           *ngIf="submitted && customersFormGroup.get('phone').errors">
+      Este campo es requerido.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="email">Correo Electronico</label>
+    <input type="text"
+           class="form-control"
+           formControlName="email"
+           id="email"
+           aria-describedby="emailHelp"
+           placeholder="Ingrese su correo electronico"
+           autofocus>
+    <small id="emailHelp" class="form-text text-muted">Por favor ingrese su correo electronico</small>
+    <small class="form-text text-danger"
+           *ngIf="submitted && customersFormGroup.get('email').errors">
+      Este campo es requerido.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="comment">Comentarios</label>
+    <textarea class="form-control"
+              formControlName="comment"
+              id="comment"
+              aria-describedby="commentHelp"
+              placeholder="Por favor ingrese su consulta o comentario"></textarea>
+    <small class="form-text text-danger"
+           *ngIf="submitted && customersFormGroup.get('comment').errors">
+      Este campo es requerido.
+    </small>
+  </section>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,18 @@
+<article class="shared-full-view machines-root">
+  <section class="machines-root-menu">
+    <div class="list-group">
+      <a routerLink="/machines/list"
+         routerLinkActive="machines-root-menu-item-active"
+         class="list-group-item list-group-item-action machines-root-menu-item">Machines</a>
+      <a routerLink="/machines/create"
+         routerLinkActive="machines-root-menu-item-active"
+         class="list-group-item list-group-item-action machines-root-menu-item">Register a
+        machine</a>
+    </div>
+  </section>
+  <section class="machines-root-body">
+    <router-outlet></router-outlet>
+  </section>
+</article>
+
+<img src="../../../assets/images/carousel-img1.jpg" alt="background" class="shared-full-view machines-root-bg">

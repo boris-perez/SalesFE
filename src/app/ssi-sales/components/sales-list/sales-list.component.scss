@@ -1,0 +1,22 @@
+@import "../../../../assets/grid/ssi-ui-variables";
+
+:host {
+  display: flex;
+  height: 100%;
+}
+
+.sales-list {
+  width: 100%;
+}
+
+.sales-table {
+  color: white;
+}
+
+.sales-list-jumbotron {
+  color: white;
+}
+
+.sales-list-jumbotron-divider {
+  background: white;
+}

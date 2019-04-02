@@ -1,0 +1,22 @@
+@import "../../../../assets/grid/ssi-ui-variables";
+
+:host {
+  display: flex;
+  height: 100%;
+}
+
+.machines-list {
+  width: 100%;
+}
+
+.machines-table {
+  color: white;
+}
+
+.machines-list-jumbotron {
+  color: white;
+}
+
+.machines-list-jumbotron-divider {
+  background: white;
+}

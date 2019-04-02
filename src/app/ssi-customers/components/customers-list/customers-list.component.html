@@ -1,0 +1,30 @@
+<article class="customers-list">
+
+  <table *ngIf="customers.length > 0" class="table table-striped customers-table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customers of customers; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ customers.firstName + ' ' + customers.lastName }}</td>
+      <td>{{ customers.address }}</td>
+      <td>{{ customers.phone}}</td>
+      <td>{{ customers.email}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="customers.length <= 0" class="jumbotron bg-transparent customers-list-jumbotron">
+    <h1 class="display-4 text-center">Ups!</h1>
+    <hr class="my-4 customers-list-jumbotron-divider">
+    <p class="lead">Your company has no clients so far</p>
+  </div>
+
+</article>

@@ -1,0 +1,17 @@
+<article class="shared-full-view sales-root">
+  <section class="sales-root-menu">
+    <div class="list-group">
+      <a routerLink="/sales/list"
+         routerLinkActive="sales-root-menu-item-active"
+         class="list-group-item list-group-item-action sales-root-menu-item">Sales</a>
+      <a routerLink="/sales/create"
+         routerLinkActive="sales-root-menu-item-active"
+         class="list-group-item list-group-item-action sales-root-menu-item">Register a sale</a>
+    </div>
+  </section>
+  <section class="sales-root-body">
+    <router-outlet></router-outlet>
+  </section>
+</article>
+
+<img src="../../../assets/images/carousel-img1.jpg" alt="background" class="shared-full-view sales-root-bg">

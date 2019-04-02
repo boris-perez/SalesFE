@@ -1,0 +1,54 @@
+<form class="sales-create" [formGroup]="salesFormGroup" (ngSubmit)="onSubmit()">
+
+  <section class="form-group">
+    <label for="customerId">Customer</label>
+    <select class="form-control"
+            id="customerId"
+            formControlName="customerId">
+      <option *ngFor="let customer of customers"
+              value="{{customer.id}}">{{customer.firstName}} {{customer.lastName}}
+      </option>
+    </select>
+    <small class="form-text text-danger"
+           *ngIf="submitted && salesFormGroup.get('customerId').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="machineId">Machine</label>
+    <select class="form-control"
+            id="machineId"
+            formControlName="machineId">
+      <option *ngFor="let machine of machines"
+              value="{{machine.id}}">{{machine.name}}
+      </option>
+    </select>
+    <small class="form-text text-danger"
+           *ngIf="submitted && salesFormGroup.get('machineId').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="code">Sales code</label>
+    <input type="text"
+           class="form-control"
+           formControlName="code"
+           id="code"
+           aria-describedby="nameHelp"
+           placeholder="Enter the sales code"
+           autofocus>
+    <small id="nameHelp" class="form-text text-muted">Please enter the sales code</small>
+
+  </section>
+
+  <section class="form-group">
+    <label for="description">Details</label>
+    <textarea class="form-control"
+              id="description"
+              placeholder="Please enter the description"></textarea>
+  </section>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

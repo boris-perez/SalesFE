@@ -1,0 +1,88 @@
+<article class="home-root">
+
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <img src="../../../assets/images/carousel-img1.jpg" alt="Random first slide" class="carousel-img">
+      <div class="carousel-caption">
+        <h3>Construyendo un futuro</h3>
+        <p>Pensando en usted!</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img src="../../../assets/images/carousel-img2.jpg" alt="Random second slide" class="carousel-img">
+      <div class="carousel-caption">
+        <h3>Pensando en su negocio</h3>
+        <p>Con los mejores equipos..! </p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img src="../../../assets/images/carousel-img3.jpg" alt="Random third slide" class="carousel-img">
+      <div class="carousel-caption">
+        <h3>Mejorando su productividad..</h3>
+        <p>Equipos de ultima tecnologia y mayor rendimiento.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <!-- Se podria hacer una lista de imagenes cosumiend de un servicio-->
+  <article class="home-container">
+    <section class="home-content">
+      <div class="home-content-img" *ngFor="let machines of machines; index as i">
+        <img src="../../../assets/images/home-img-security.jpg" routerLink="" alt="Cinque Terre"
+             class="home-content-img-size">
+        <span class="home-content-title">{{machines.name}}</span>
+        <button class="btn btn-outline-danger" (click)="viewCatalogo(machines)">Ver Machines</button>
+      </div>
+
+    </section>
+  </article>
+
+
+  <article class="home-container">
+    <section class="home-content">
+      <div class="home-content-img">
+        <img src="../../../assets/images/home-img-security.jpg" routerLink="" alt="Cinque Terre"
+             class="home-content-img-size">
+        <span class="home-content-title">Equipos</span>
+      </div>
+
+      <div class="home-content-img">
+      <img src="../../../assets/images/4.jpg"  alt="Cinque Terre" routerLink=""
+           class="home-content-img-size">
+      <span class="home-content-title">Equipos1</span>
+    </div>
+
+      <div class="home-content-img">
+        <img src="../../../assets/images/1.jpg"  alt="Cinque Terre" routerLink=""
+             class="home-content-img-size">
+        <span class="home-content-title">Equipos1</span>
+      </div>
+
+    </section>
+
+    <section class="home-content">
+      <div class="home-content-img">
+        <img src="../../../assets/images/3.jpg" alt="Cinque Terre" routerLink=""
+             class="home-content-img-size">
+        <span class="home-content-title">Equipos1</span>
+      </div>
+      <div class="home-content-img">
+        <img src="../../../assets/images/home-img-security-mission.jpg"  routerLink=""  alt="Cinque Terre"
+             class="home-content-img-size">
+        <span class="home-content-title">Equipos2</span>
+      </div>
+      <div class="home-content-img">
+        <img src="../../../assets/images/5.jpg"  alt="Cinque Terre" routerLink="#"
+             class="home-content-img-size">
+        <span class="home-content-title">Equipos1</span>
+      </div>
+    </section>
+
+    <section>
+
+    </section>
+
+  </article>
+
+
+</article>

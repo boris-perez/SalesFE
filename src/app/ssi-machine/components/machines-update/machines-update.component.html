@@ -1,0 +1,98 @@
+<form class="machines-create" [formGroup]="machinesFormGroup" (ngSubmit)="onSubmit()">
+  <section class="form-group">
+    <label for="name">Name</label>
+    <input type="text"
+           class="form-control"
+           formControlName="name"
+           id="name"
+           aria-describedby="nameHelp"
+           placeholder="Name of the machines"
+           autofocus>
+    <small id="nameHelp" class="form-text text-muted">Please enter the name of machine</small>
+    <small class="form-text text-danger"
+           *ngIf="submitted && machinesFormGroup.get('name').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="mark">Mark</label>
+    <input type="text"
+           class="form-control"
+           formControlName="mark"
+           id="mark"
+           aria-describedby="nameHelp"
+           placeholder="Name of the mark"
+           autofocus>
+    <small id="nameHelp" class="form-text text-muted">Please enter the mark of the machine</small>
+    <small class="form-text text-danger"
+           *ngIf="submitted && machinesFormGroup.get('mark').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="model">Model</label>
+    <input type="text"
+           class="form-control"
+           formControlName="model"
+           id="model"
+           aria-describedby="nameHelp"
+           placeholder="Name of the model"
+           autofocus>
+    <small id="nameHelp" class="form-text text-muted">Please enter the model of the machine</small>
+    <small class="form-text text-danger"
+           *ngIf="submitted && machinesFormGroup.get('model').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="capacity">Capacity</label>
+    <select class="form-control"
+            id="capacity"
+            placeholder="Select the capacity"
+            formControlName="capacity">
+      <option *ngFor="let capacity of machinesCapacity" value="{{capacity}}">{{capacity}}</option>
+    </select>
+    <small class="form-text text-danger"
+           *ngIf="submitted && machinesFormGroup.get('capacity').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="price">Price</label>
+    <input type="text"
+           class="form-control"
+           formControlName="price"
+           id="price"
+           aria-describedby="nameHelp"
+           placeholder="Price of the machines"
+           autofocus>
+    <small id="nameHelp" class="form-text text-muted">Please enter the price of machine</small>
+    <small class="form-text text-danger"
+           *ngIf="submitted && machinesFormGroup.get('price').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control"
+              formControlName="description"
+              id="description"
+              placeholder="Please enter a description"></textarea>
+    <small class="form-text text-danger"
+           *ngIf="submitted && machinesFormGroup.get('description').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group" style="display: flex;">
+    <img *ngIf="this.image" [src]="this.image" alt="image" style="height: 200px; width: 200px;">
+    <input type="file" (change)="onFileChange($event)"/>
+  </section>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

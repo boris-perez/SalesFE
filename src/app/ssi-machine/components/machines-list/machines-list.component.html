@@ -1,0 +1,41 @@
+<article class="machines-list">
+
+  <table *ngIf="machines.length > 0" class="table table-striped machines-table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Mark</th>
+      <th scope="col">Capacity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let machines of machines; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ machines.name }}</td>
+      <td>{{ machines.mark + ' ' + machines.model }}</td>
+      <td>{{ machines.capacity }}</td>
+      <td>{{ machines.price }}</td>
+      <td>
+        <div class="btn-group" role="group">
+          <button type="button"
+                  class="btn btn-outline-light fa fa-pencil"
+                  (click)="onUpdateAction($event, machines)"></button>
+          <button type="button"
+                  class="btn btn-outline-warning fa fa-trash"
+                  (click)="onDeleteAction($event, machines)"></button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="machines.length <= 0" class="jumbotron bg-transparent machines-list-jumbotron">
+    <h1 class="display-4 text-center">Up!</h1>
+    <hr class="my-4 machines-list-jumbotron-divider">
+    <p class="lead">Your company doesn't have any machine until this moment.</p>
+  </div>
+
+</article>

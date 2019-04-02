@@ -1,0 +1,30 @@
+<article class="sales-list">
+
+  <table *ngIf="sales.length > 0" class="table table-striped sales-table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Customers</th>
+      <th scope="col">Machine</th>
+      <th scope="col">Price</th>
+      <th scope="col">Code</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let sale of sales; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ sale.customer.firstName + ' ' + sale.customer.lastName}}</td>
+      <td>{{ sale.machine.name }}</td>
+      <td>{{ sale.machine.price }}</td>
+      <td>{{ sale.code}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="sales.length <= 0" class="jumbotron bg-transparent sales-list-jumbotron">
+    <h1 class="display-4 text-center">Ups!</h1>
+    <hr class="my-4 sales-list-jumbotron-divider">
+    <p class="lead">You Company dont have sales yet.</p>
+  </div>
+
+</article>
