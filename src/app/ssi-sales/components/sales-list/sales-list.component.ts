@@ -39,7 +39,6 @@ export class SalesListComponent implements OnInit, OnDestroy {
     this._salesSubscription = this._salesHttpService.doFindAll().subscribe(
       (sales: Sales[]) => {
         this.sales = sales;
-        console.log(this.sales);
       }
     );
   }
