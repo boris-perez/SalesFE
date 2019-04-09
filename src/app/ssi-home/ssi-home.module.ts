@@ -27,7 +27,11 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     CommonModule,
     HomeRoutesModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    HttpClientModule,
+  ],
+  providers: [
+    MachinesHttpService
   ],
   exports: [
     SsiHomeComponent,

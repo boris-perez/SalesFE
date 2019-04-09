@@ -1,7 +1,7 @@
 <form class="customers-create" [formGroup]="customersFormGroup" (ngSubmit)="onSubmit()">
 
   <section class="form-group">
-    <label for= "firstName">Nombre</label>
+    <label for= "name">Nombre</label>
     <input type="text"
            class="form-control"
            formControlName="firstName"
@@ -91,5 +91,5 @@
     </small>
   </section>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" id="submit">Submit</button>
 </form>

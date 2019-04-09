@@ -32,12 +32,21 @@
 
 .home-content-img {
   width: 30%;
+  cursor: pointer;
+  border: 1px solid #cccccc;
+  margin: 10px;
+  padding: 10px;
 
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(237, 230, 237, 1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(237, 230, 237, 1);
+  box-shadow: 10px 10px 5px 0px rgba(237, 230, 237, 1);
+
+  @include ssi-main-center();
 }
 
 .home-content-img-size {
-  width: 306px;
-  height: 236px;
+  width: 180px;
+  height: 160px;
 }
 
 .home-content-text {
